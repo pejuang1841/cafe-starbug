@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+Use App\Models\Menu;
 
 class MenuController extends Controller
 {
@@ -11,7 +12,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        //
+        $data = Menu::get();
+        return view('view.viewmenu', compact('data'));
     }
 
     /**

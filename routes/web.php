@@ -28,7 +28,16 @@ use App\Http\Controllers\{
 Route::get('/', function () {
     return view('welcome');
 });
+//form
 Route::get('/form-menu', [MenuController::class, 'create']);
 Route::get('/form-pegawai', [PegawaiController::class, 'create']);
 Route::get('/form-pelanggan', [PelangganController::class, 'create']);
 Route::get('/form-pesanan', [PesananController::class, 'create']);
+
+//view
+
+Route::get('/show-pesanan',[PesananController::class,'index']);
+Route::get('/show-menu', [MenuController::class, 'index']);
+Route::get('/show-pelanggan', [PelangganController::class, 'index']);
+
+

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+Use App\Models\Pegawai;
 
 class PegawaiController extends Controller
 {
@@ -11,7 +12,8 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        //
+        $data = Pegawai::get();
+        return view('view.viewpegawai', compact('data'));
     }
 
     /**

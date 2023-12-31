@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pesanan;
 
 class PesananController extends Controller
 {
@@ -11,7 +12,8 @@ class PesananController extends Controller
      */
     public function index()
     {
-        //
+        $data = Pesanan::get();
+        return view('view.viewpesanan', compact('data'));
     }
 
     /**
