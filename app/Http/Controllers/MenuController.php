@@ -29,7 +29,15 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Menu;
+        $data->nama_menu = $request->nama_menu;
+        $data->harga = $request->harga;
+        if ($data->save()) {
+            return ['status' => 'Menu Berhasil Di Kirim'];
+            return redirect('/form-menu');
+        }else{
+            return ['status' => 'Menu Tidak Berhasil di Kirim'];
+        }
     }
 
     /**

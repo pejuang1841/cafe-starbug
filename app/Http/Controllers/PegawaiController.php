@@ -29,7 +29,14 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Pegawai;
+        $data->nama_pegawai = $request->nama_pegawai;
+        $data->alamat = $request->alamat;
+        if($data->save()){
+            return ['status' => 'berhasil menyimpan'];
+        }else{
+            return ['status' => 'Tidka berhasil menyimpan'];
+        }
     }
 
     /**

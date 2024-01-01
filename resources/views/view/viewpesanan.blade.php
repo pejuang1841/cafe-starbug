@@ -13,19 +13,27 @@
                 <table class="datatables-basic table border-top">
                     <thead>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th>id</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Date</th>
-                        <th>Salary</th>
-                        <th>Status</th>
-                        <th>Action</th>
+                        <th>id pesanan</th>
+                        <th>id pesanan</th>
+                        <th>id pelanggan</th>
+                        <th>no telepon</th>
+                        <th>id menu</th>
+                        <th>jumlah pesan</th>
+                        <th>total</th>
+                        <th>metode</th>
                     </tr>
                     </thead>
                     <tbody>
-                        
+                        @foreach($data as $datas)
+                            <th>{{ $datas->id_pesanan }}</th>
+                            <th>{{ $datas->id_pesanan }}</th>
+                            <th>{{ $datas->id_pelanggan }}</th>
+                            <th>{{ $datas->no_telepon }}</th>
+                            <th>{{ $datas->id_menu }}</th>
+                            <th>{{ $datas->jumlah_pesanan}}</th>
+                            <th>{{ $datas->total_pembayaran}}</th>
+                            <th>{{ $datas->metode_pembayaran}}</th>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

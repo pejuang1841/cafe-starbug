@@ -9,62 +9,39 @@
 <body>
 <div class="container">
         <div class=" text-center mt-5 ">
-
-            <h1 >Form Menu</h1>
-                
-            
-        </div>
-
-    
+            <h1 >Form Menu</h1>          
+        </div>    
     <div class="row ">
       <div class="col-lg-7 mx-auto">
         <div class="card mt-2 mx-auto p-4 bg-light">
             <div class="card-body bg-light">
-       
-            <div class = "container">
-                             <form id="contact-form" role="form">
-
-            
-
-            <div class="controls">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_name">Nama Menu *</label>
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Masukkan Nama Menu *" required="required" data-error="Nama menu di perlukan.">
-                            
+                <div class = "container">
+                    <form id="contact-form" role="form" method="POST" action="{{ url('store-menu')}}">
+                        <div class="controls">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Nama Menu *</label>
+                                        <input id="form_name" type="text" name="nama_menu" class="form-control" placeholder="Masukkan Nama Menu *" required="required" data-error="Nama menu di perlukan.">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname">Harga *</label>
+                                        <input id="form_lastname" type="number" name="harga" class="form-control" placeholder="Masukkan Harga *" required="required" data-error="Harga di perlukan.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn mt-3 btn-success btn-send  pt-2 btn-block" value="Submit" >    
+                            </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_lastname">Harga *</label>
-                            <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Masukkan Harga *" required="required" data-error="Harga di perlukan.">
-                                                            </div>
-                    </div>
+                    </form>
                 </div>
-                
-
-
-                    <div class="col-md-12">
-                        
-                        <input type="submit" class="btn mt-5 btn-success btn-send  pt-2 btn-block
-                            " value="Submit" >
-                    
-                </div>
-          
-                </div>
-
-
-        </div>
-         </form>
-        </div>
             </div>
-
-
-    </div>
+        </div>
         <!-- /.8 -->
-
     </div>
     <!-- /.row-->
 
