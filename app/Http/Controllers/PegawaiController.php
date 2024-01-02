@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+Use App\Models\Pegawai;
 
 class PegawaiController extends Controller
 {
@@ -11,7 +12,8 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        //
+        $data = Pegawai::get();
+        return view('view.viewpegawai', compact('data'));
     }
 
     /**
@@ -27,7 +29,14 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Pegawai;
+        $data->nama_pegawai = $request->nama_pegawai;
+        $data->alamat = $request->alamat;
+        if($data->save()){
+            return ['status' => 'berhasil menyimpan'];
+        }else{
+            return ['status' => 'Tidka berhasil menyimpan'];
+        }
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pelanggan;
 
 class PelangganController extends Controller
 {
@@ -11,7 +12,8 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        //
+        $data = Pelanggan::get();
+        return view('view.viewpelanggan', compact('data'));
     }
 
     /**
@@ -27,7 +29,15 @@ class PelangganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Pelanggan;
+        $data->nama_pelanggan = $request->nama_pelanggan;
+        $data->alamat = $request->alamat;
+        $data->nomor_telpon = $request->nomor_telpon;
+        if ($data->save) {
+            return ['status' => 'Berhasil di Kirim'];
+        }else {
+            return ['status' => 'Tidak Behasil di Kirim'];
+        }
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+Use App\Models\Menu;
 
 class MenuController extends Controller
 {
@@ -11,7 +12,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        //
+        $data = Menu::get();
+        return view('view.viewmenu', compact('data'));
     }
 
     /**
@@ -27,7 +29,15 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Menu;
+        $data->nama_menu = $request->nama_menu;
+        $data->harga = $request->harga;
+        if ($data->save()) {
+            return ['status' => 'Menu Berhasil Di Kirim'];
+            return redirect('/form-menu');
+        }else{
+            return ['status' => 'Menu Tidak Berhasil di Kirim'];
+        }
     }
 
     /**
