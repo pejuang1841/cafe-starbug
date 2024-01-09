@@ -107,21 +107,17 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                     
-
-
-                    <div class="col-md-12 mt-2">
-                        
-                        <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
-                            " value="Send Message" >
-                    
-                </div>
+                    <div class=" d-flex justify-content-between col-md-12 mt-2">             
+                        <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Send Message" > 
+                        <button class="btn btn-success"><a href="/" class="text-white">Back</a></button>                  
+                    </div>
           
                 </div>
 
 
         </div>
          </form>
+
         </div>
             </div>
 

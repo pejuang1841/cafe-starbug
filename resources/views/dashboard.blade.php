@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+        background-image: url('https://cdn.discordapp.com/attachments/756362680138203237/1194310621076918332/coffe_shop.jpg?ex=65afe371&is=659d6e71&hm=f86343974b273dc1cbb6796a910a47765bcee94a5b56e13e73d1753cba1cd803&');
+        background-size: cover;
+      }
+    </style>
     <title>HoMe</title>
   </head>
   <body>
@@ -23,27 +28,53 @@
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link text-white">
+          <a href="/form-pesanan" class="nav-link text-white">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
             Form Pesanan
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link text-white">
+          <a href="/form-pegawai" class="nav-link text-white">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
             Form Pegawai
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link text-white">
+          <a href="/form-pelanggan" class="nav-link text-white">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
             Form Pelanggan
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link text-white">
+          <a href="/form-menu" class="nav-link text-white">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-            Customers
+            Form Menu
+          </a>
+        </li>
+        <br>
+        <br>
+        <li>
+          <a href="/show-menu" class="nav-link text-white">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+            Show Menu
+          </a>
+        </li>
+        <li>
+          <a href="/show-pesanan" class="nav-link text-white">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+            show pesanan
+          </a>
+        </li>
+        <li>
+          <a href="/show-pelanggan" class="nav-link text-white">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+            Show Pelanggan
+          </a>
+        </li>
+        <li>
+          <a href="/show-pegawai" class="nav-link text-white">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+            Show Pegawai
           </a>
         </li>
       </ul>
@@ -63,7 +94,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="headline d-flex justify-content-center bg-secondary">
+      <div class="container headline d-flex justify-content-center">
         <h1 class="text-white mt-5">Starbug Cafe</h1>
       </div>
       <div class="isi">
