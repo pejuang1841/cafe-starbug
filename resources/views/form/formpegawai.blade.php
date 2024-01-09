@@ -23,45 +23,30 @@
             <div class="card-body bg-light">
        
             <div class = "container">
-                             <form id="contact-form" role="form">
-
-            
-
-            <div class="controls">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_name">Nama Pegawai *</label>
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Masukkan Nama Pegawai *" required="required" data-error="Nama Pegawai di perlukan.">
-                            
+            <form id="contact-form" role="form" method="POST" action="{{ url('store-pegawai')}}">
+                @csrf
+                <div class="controls">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_name">Nama Pegawai *</label>
+                                <input id="form_name" type="text" name="nama_pegawai" class="form-control" placeholder="Masukkan Nama Pegawai *" required="required" data-error="Nama Pegawai di perlukan.">  
+                            </div>
                         </div>
                     </div>
-                    
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group mt-2">
-                            <label for="form_message">Alamat *</label>
-                            <textarea id="form_message" name="message" class="form-control" placeholder="Masukkan Alamat Anda." rows="4" required="required" data-error="Alamat di perlukan."></textarea
-                                >
-                            </div>
-
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group mt-2">
+                                <label for="form_message">Alamat *</label>
+                                <textarea id="form_message" name="alamat" class="form-control" placeholder="Masukkan Alamat Anda." rows="4" required="required" data-error="Alamat di perlukan."></textarea>
+                            </div>    
                         </div>
-
-
-                    <div class="col-md-12">
-                        
-                        <input type="submit" class="btn mt-5 btn-success btn-send  pt-2 btn-block
-                            " value="Submit" >
-                    
+                        <div class="col-md-12">
+                            <input type="submit" class="btn mt-5 btn-success btn-send  pt-2 btn-block" value="Submit" >
+                        </div>
+                    </div>
                 </div>
-          
-                </div>
-
-
-        </div>
-         </form>
+            </form>
         </div>
             </div>
 

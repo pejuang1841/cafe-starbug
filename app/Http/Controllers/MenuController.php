@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 Use App\Models\Menu;
-<<<<<<< HEAD
-=======
 use Alert;
->>>>>>> fead75f21947022f80f8f94b45d9f9a0ff36909d
 
 class MenuController extends Controller
 {
@@ -37,13 +34,8 @@ class MenuController extends Controller
         $data->nama_menu = $request->nama_menu;
         $data->harga = $request->harga;
         if ($data->save()) {
-<<<<<<< HEAD
-            return ['status' => 'Menu Berhasil Di Kirim'];
-            return redirect('/form-menu');
-=======
             Alert::success('Hore!', 'Data berhasil ditambahkan');
             return redirect()->back();
->>>>>>> fead75f21947022f80f8f94b45d9f9a0ff36909d
         }else{
             return ['status' => 'Menu Tidak Berhasil di Kirim'];
         }

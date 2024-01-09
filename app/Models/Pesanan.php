@@ -10,7 +10,6 @@ class Pesanan extends Model
     use HasFactory;
     protected $table = 'pesanan';
     protected $fillable = [
-        'id_pesanan',
         'id_pegawai',
         'id_pelanggan',
         'no_telepon',

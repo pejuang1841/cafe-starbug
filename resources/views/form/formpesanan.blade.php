@@ -8,7 +8,7 @@
 </head>
 <body>
 @include('sweetalert::alert')
-<div class="container">]
+<div class="container">
         <div class=" text-center mt-5 ">
 
             <h1 >Form Pesanan</h1>
@@ -23,8 +23,8 @@
             <div class="card-body bg-light">
        
             <div class = "container">
-                             <form id="contact-form" role="form">
-
+                             <form id="contact-form" role="form" method="POST" action=" {{  url('store-pesanan')}}">
+            @csrf
             
 
             <div class="controls">
@@ -33,14 +33,23 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="form_name">ID Pegawai *</label>
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Masukkan ID Pegawai *" required="required" data-error="ID Pegawai di perlukan.">
-                            
+                            <select id="form_need" name="id_pegawai" class="form-control" required="required" data-error="Pilih metode pembayaran.">
+                                <option value="" selected disabled>--Pilih metode pembayaran--</option>
+                                @foreach ($pegawai as $pg)
+                                <option value="{{$pg->id_pegawai}}">{{$pg->id_pegawai}} | {{$pg->nama_pegawai}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="form_lastname">ID Pelanggan *</label>
-                            <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Masukkan ID Pelanggan *" required="required" data-error="ID Pelanggan di perlukan.">
+                            <select id="form_need" name="id_pelanggan" class="form-control" required="required" data-error="Pilih metode pembayaran.">
+                                <option value="" selected disabled>--Pilih metode pembayaran--</option>
+                                @foreach ($pelanggan as $pg)
+                                <option value="{{$pg->id_pelanggan}}">{{$pg->id_pelanggan}} | {{$pg->nama_pelanggan}}</option>
+                                @endforeach
+                            </select>
                                                             </div>
                     </div>
                 </div>
@@ -48,35 +57,45 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="form_email">ID Menu *</label>
-                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Masukkan ID Menu *" required="required" data-error="ID Menu di perlukan.">
+                            <select id="form_need" name="id_menu" class="form-control" required="required" data-error="Pilih metode pembayaran.">
+                                <option value="" selected disabled>--Pilih metode pembayaran--</option>
+                                @foreach ($menu as $pg)
+                                <option value="{{ $pg->id_menu }}">{{$pg->nama_menu}} | {{ $pg->harga}}</option>
+                                @endforeach
+                            </select>
                             
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="form_email">Jumlah Pesanan *</label>
-                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Masukkan Jumlah Pesanan *" required="required" data-error="Jumlah Pesanan di perlukan.">
+                            <input id="form_email" type="text" name="jumlah_pesanan" class="form-control" placeholder="Masukkan Jumlah Pesanan *" required="required" data-error="Jumlah Pesanan di perlukan.">
                             
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="form_email">Total Pembayaran *</label>
-                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Masukkan Total Pembayaran *" required="required" data-error="Total Pembayaran di perlukan.">
+                            <input id="form_email" type="text" name="total_pembayaran" class="form-control" placeholder="Masukkan Total Pembayaran *" required="required" data-error="Total Pembayaran di perlukan.">
                             
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6">  
                         <div class="form-group">
                             <label for="form_email">No Telepon *</label>
-                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Masukkan No Telepon *" required="required" data-error="No Telepon di perlukan.">
+                            <select id="form_need" name="no_telepon" class="form-control" required="required" data-error="Pilih metode pembayaran.">
+                                <option value="" selected disabled>--Pilih metode pembayaran--</option>
+                                @foreach ($pelanggan as $pg)
+                                <option value="{{ $pg->nomor_telpon}}">{{$pg->id_pelanggan}} | {{$pg->nomor_telpon}}</option>
+                                @endforeach 
+                            </select>
                             
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="form_need">Metode Pembayaran *</label>
-                            <select id="form_need" name="need" class="form-control" required="required" data-error="Pilih metode pembayaran.">
+                            <select id="form_need" name="metode_pembayaran" class="form-control" required="required" data-error="Pilih metode pembayaran.">
                                 <option value="" selected disabled>--Pilih metode pembayaran--</option>
                                 <option >Cash</option>
                                 <option >Qris</option>

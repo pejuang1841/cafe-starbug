@@ -37,12 +37,9 @@ Route::get('/show-pelanggan', [PelangganController::class, 'index']);
 
 //store
 Route::post('store-menu', [MenuController::class, 'store']);
-<<<<<<< HEAD
-=======
-Route::post('store-pegawai', [MenuController::class, 'store']);
-Route::post('store-pelanggan', [MenuController::class, 'store']);
-Route::post('store-pesanan', [MenuController::class, 'store']);
->>>>>>> fead75f21947022f80f8f94b45d9f9a0ff36909d
+Route::post('store-pegawai', [PegawaiController::class, 'store']);
+Route::post('store-pelanggan', [PelangganController::class, 'store']);
+Route::post('store-pesanan', [PesananController::class, 'store']);
 
 
 
