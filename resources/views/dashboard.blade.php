@@ -8,7 +8,6 @@
     <title>HoMe</title>
   </head>
   <body>
-<<<<<<< HEAD
   <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
@@ -60,7 +59,6 @@
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" href="#">Sign out</a></li>
       </ul>
-=======
   <div class="d-flex flex-row">
     <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark d-inline-block" style="width: 280px; height: 100vh;">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -122,7 +120,6 @@
       <div class="isi">
         <!-- isi disini untuk isi dari dashboardnya -->
       </div>
->>>>>>> 722bde5b3417199ebde6209d65d1a33a02f38670
     </div>
   </div>
   </body>
