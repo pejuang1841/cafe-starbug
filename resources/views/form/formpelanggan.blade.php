@@ -23,8 +23,8 @@
             <div class="card-body bg-light">
        
             <div class = "container">
-                             <form id="contact-form" role="form">
-
+                             <form id="contact-form" role="form" method="POST" action="{{ url('store-pelanggan')}}">
+            @csrf
             
 
             <div class="controls">
@@ -33,14 +33,14 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="form_name">Nama Pelanggan*</label>
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Masukkan Nama Pelanggan *" required="required" data-error="Nama Pelanggan di perlukan.">
+                            <input id="form_name" type="text" name="nama_pelanggan" class="form-control" placeholder="Masukkan Nama Pelanggan *" required="required" data-error="Nama Pelanggan di perlukan.">
                             
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="form_lastname">Nomer Telepon *</label>
-                            <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Masukkan Nomer Telepon *" required="required" data-error="Nomor telepon di perlukan.">
+                            <input id="form_lastname" type="text" name="nomor_telpon" class="form-control" placeholder="Masukkan Nomer Telepon *" required="required" data-error="Nomor telepon di perlukan.">
                                                             </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                     <div class="col-md-12">
                         <div class="form-group mt-2">
                             <label for="form_message">Alamat *</label>
-                            <textarea id="form_message" name="message" class="form-control" placeholder="Masukkan Alamat Anda." rows="4" required="required" data-error="Alamat di perlukan."></textarea
+                            <textarea id="form_message" name="alamat" class="form-control" placeholder="Masukkan Alamat Anda." rows="4" required="required" data-error="Alamat di perlukan."></textarea
                                 >
                             </div>
 

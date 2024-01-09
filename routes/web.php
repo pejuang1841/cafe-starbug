@@ -20,7 +20,7 @@ use App\Http\Controllers\{
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 //form
 Route::get('/form-menu', [MenuController::class, 'create']);
@@ -37,9 +37,15 @@ Route::get('/show-pelanggan', [PelangganController::class, 'index']);
 
 //store
 Route::post('store-menu', [MenuController::class, 'store']);
+<<<<<<< HEAD
 /*Route::post('store-pegawai', [MenuController::class, 'store']);
 Route::post('store-pelanggan', [MenuController::class, 'store']);
 Route::post('store-pesanan', [MenuController::class, 'store']);*/
+=======
+Route::post('store-pegawai', [PegawaiController::class, 'store']);
+Route::post('store-pelanggan', [PelangganController::class, 'store']);
+Route::post('store-pesanan', [PesananController::class, 'store']);
+>>>>>>> 265b473fe43d59fe058c39d0bcfd64a8970c78ec
 
 
 

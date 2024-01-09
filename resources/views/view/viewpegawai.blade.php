@@ -34,7 +34,7 @@
                 </table>
             </div>
             <div class="">
-                <button class="btn btn-md bg-success text-white">Back</button>
+                <button class="btn btn-md bg-success text-white"><a href="/">Back</a></button>
             </div>
         </div>
     </div>

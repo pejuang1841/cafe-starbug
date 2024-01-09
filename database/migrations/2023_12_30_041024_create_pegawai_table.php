@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_pegawai');
             $table->string('nama_pegawai', 255);
             $table->string('alamat', 255);
+            $table->timestamps();
         });
     }
 

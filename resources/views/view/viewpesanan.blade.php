@@ -14,7 +14,6 @@
                     <thead>
                     <tr>
                         <th>id pesanan</th>
-                        <th>id pesanan</th>
                         <th>id pelanggan</th>
                         <th>no telepon</th>
                         <th>id menu</th>
@@ -25,7 +24,7 @@
                     </thead>
                     <tbody>
                         @foreach($data as $datas)
-                            <th>{{ $datas->id_pesanan }}</th>
+                            <tr>
                             <th>{{ $datas->id_pesanan }}</th>
                             <th>{{ $datas->id_pelanggan }}</th>
                             <th>{{ $datas->no_telepon }}</th>
@@ -33,9 +32,11 @@
                             <th>{{ $datas->jumlah_pesanan}}</th>
                             <th>{{ $datas->total_pembayaran}}</th>
                             <th>{{ $datas->metode_pembayaran}}</th>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
+                <button class="btn-success"> <a href="/">Back</a></button>
             </div>
         </div>
     </div>

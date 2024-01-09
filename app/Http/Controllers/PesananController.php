@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pesanan;
+Use App\Models\Pegawai;
+use App\Models\Pelanggan;
+use App\Models\Menu;
+use Alert;
 
 class PesananController extends Controller
 {
@@ -21,7 +25,10 @@ class PesananController extends Controller
      */
     public function create()
     {
-        return view("form.formpesanan");
+        $pegawai = Pegawai::get();
+        $pelanggan = Pelanggan::get();
+        $menu = Menu::get();
+        return view("form.formpesanan", compact('pegawai','pelanggan','menu'));
     }
 
     /**
@@ -29,7 +36,18 @@ class PesananController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Pesanan;
+        $data->id_pegawai = $request->id_pegawai;
+        $data->id_pelanggan = $request->id_pelanggan;
+        $data->no_telepon = $request->no_telepon;
+        $data->id_menu = $request->id_menu;
+        $data->jumlah_pesanan = $request->jumlah_pesanan;
+        $data->total_pembayaran = $request->total_pembayaran;
+        $data->metode_pembayaran = $request->metode_pembayaran;
+        if($data->save()){
+            Alert::success('berhasil Menyimpan');
+            return redirect()->back();
+        }
     }
 
     /**
