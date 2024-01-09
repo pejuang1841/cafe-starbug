@@ -112,6 +112,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+<<<<<<< HEAD
                      
 
 
@@ -121,12 +122,19 @@
                             " value="Submit" >
                     
                 </div>
+=======
+                    <div class=" d-flex justify-content-between col-md-12 mt-2">             
+                        <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Send Message" > 
+                        <button class="btn btn-success"><a href="/" class="text-white">Back</a></button>                  
+                    </div>
+>>>>>>> 46c0a3a4a2f4c7c6bf93465569b35e8d158c9df9
           
                 </div>
 
 
         </div>
          </form>
+
         </div>
             </div>
 

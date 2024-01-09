@@ -60,12 +60,10 @@
                         </div>
 
 
-                    <div class="col-md-12">
-                        
-                        <input type="submit" class="btn mt-5 btn-success btn-send  pt-2 btn-block
-                            " value="Submit" >
-                    
-                </div>
+                        <div class=" d-flex justify-content-between col-md-12 mt-2">             
+                        <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Send Message" > 
+                        <button class="btn btn-success"><a href="/" class="text-white">Back</a></button>                  
+                    </div>
           
                 </div>
 
@@ -74,7 +72,7 @@
          </form>
         </div>
             </div>
-
+        
 
     </div>
         <!-- /.8 -->
