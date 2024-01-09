@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pelanggan;
+use Alert;
 
 class PelangganController extends Controller
 {
@@ -34,7 +35,8 @@ class PelangganController extends Controller
         $data->alamat = $request->alamat;
         $data->nomor_telpon = $request->nomor_telpon;
         if ($data->save) {
-            return ['status' => 'Berhasil di Kirim'];
+            Alert::success('Hore!', 'Data berhasil ditambahkan');
+            return redirect()->back();
         }else {
             return ['status' => 'Tidak Behasil di Kirim'];
         }

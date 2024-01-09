@@ -37,6 +37,9 @@ Route::get('/show-pelanggan', [PelangganController::class, 'index']);
 
 //store
 Route::post('store-menu', [MenuController::class, 'store']);
+Route::post('store-pegawai', [MenuController::class, 'store']);
+Route::post('store-pelanggan', [MenuController::class, 'store']);
+Route::post('store-pesanan', [MenuController::class, 'store']);
 
 
 
