@@ -20,7 +20,7 @@ use App\Http\Controllers\{
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 //form
 Route::get('/form-menu', [MenuController::class, 'create']);
