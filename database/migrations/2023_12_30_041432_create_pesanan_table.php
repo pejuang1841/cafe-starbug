@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('id_pesanan');
             $table->integer('id_pegawai');
             $table->integer('id_pelanggan');
-            $table->integer('no_telepon');
+            $table->string('no_telepon', 255);
             $table->integer('id_menu');
             $table->integer('jumlah_pesanan');
             $table->integer('total_pembayaran');
